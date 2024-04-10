@@ -5,11 +5,12 @@
 
 #app {
   height: 100vh;
+  background: linear-gradient(180deg, #56698F 0%, #5E729A 100%);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #56698F;
   height: 100vh;
 }
+
