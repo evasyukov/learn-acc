@@ -64,12 +64,10 @@ p {
   background: none;
   border: none;
   cursor: pointer;
-
 }
 .exit img {
   width: 40px;
   height: 40px;
-
 }
 .exit p {
   /* font-family: Montserrat; */
@@ -79,6 +77,5 @@ p {
   text-align: left;
 
   color: rgba(230, 230, 230, 1);
-
 }
 </style>
