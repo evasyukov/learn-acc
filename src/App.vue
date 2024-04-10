@@ -2,17 +2,20 @@
   <div class="left-menu">
     <Date />
     <ChangeTheme />
+    <InfoUser />
   </div>
 </template>
 
 <script>
 import ChangeTheme from "./components/ChangeTheme.vue"
 import Date from "./components/Date.vue"
+import InfoUser from "./components/InfoUser.vue"
 
 export default {
   components: {
     Date,
     ChangeTheme,
+    InfoUser,
   },
 }
 </script>
