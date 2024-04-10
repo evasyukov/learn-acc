@@ -1,9 +1,14 @@
 <template>
-  <div class="date-block">
-    <p>{{ date }}</p>
-    <p>{{ time }}</p>
+  <div class="block">
+    <div class="date-time">
+      <p>{{ date }}</p>
+      <p>{{ time }}</p>
+    </div>
+    <button class="exit">
+      <p>Выход</p>
+      <img src="../../assets/exit-icon.svg" alt="Описание картинки" />
+    </button>
   </div>
-  
 </template>
 
 <script>
@@ -35,7 +40,11 @@ export default {
 </script>
 
 <style scoped>
-.date-block {
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+.date-time {
   width: 45%;
   padding: 5%;
 }
@@ -46,5 +55,30 @@ p {
   font-weight: 700;
   line-height: 24.38px;
   text-align: left;
+}
+.exit {
+  margin-top: 3%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+.exit img {
+  width: 40px;
+  height: 40px;
+
+}
+.exit p {
+  /* font-family: Montserrat; */
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.26px;
+  text-align: left;
+
+  color: rgba(230, 230, 230, 1);
+
 }
 </style>
