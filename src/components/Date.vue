@@ -6,7 +6,7 @@
     </div>
     <button class="exit">
       <p>Выход</p>
-      <img src="../../assets/exit-icon.svg" alt="Описание картинки" />
+      <img src="../../assets/exit-icon.svg" alt="exit" />
     </button>
   </div>
 </template>
@@ -75,7 +75,5 @@ p {
   font-weight: 400;
   line-height: 29.26px;
   text-align: left;
-
-  color: rgba(230, 230, 230, 1);
 }
 </style>

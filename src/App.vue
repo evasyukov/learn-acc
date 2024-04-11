@@ -3,6 +3,7 @@
     <Date />
     <ChangeTheme />
     <InfoUser />
+    <InfoMenu />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import ChangeTheme from "./components/ChangeTheme.vue"
 import Date from "./components/Date.vue"
 import InfoUser from "./components/InfoUser.vue"
+import InfoMenu from "./components/InfoMenu.vue"
 
 export default {
   components: {
     Date,
     ChangeTheme,
     InfoUser,
+    InfoMenu,
   },
 }
 </script>
