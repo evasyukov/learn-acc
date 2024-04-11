@@ -1,13 +1,89 @@
 <template>
   <div class="change-button">
-    <button></button>
+    <button @click="changeColors">
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   name: "ChangeTheme",
+  methods: {
+    changeColors() {
+      document.getElementById("app").classList.add("light-theme")
+      document.querySelector(".left-menu").classList.add("light-theme")
+    },
+  },
 }
 </script>
 
-<style></style>
+<style>
+.change-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5%;
+}
+.change-button button {
+  background: none;
+  border: none;
+}
+/* Переключатель - коробка вокруг ползунка */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 76px;
+  height: 34px;
+}
+
+/* Скрыть флажок HTML по умолчанию */
+.switch input {
+  opacity: 0;
+}
+
+/* Ползунок */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #56698f 0%, #5e729a 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 76px;
+  height: 20px;
+}
+
+.slider:before {
+  content: url(/assets/change-btn.svg);
+  position: absolute;
+  left: -20px;
+  bottom: -25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: rgba(239, 127, 26, 1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(90%);
+}
+
+/* Закругленные ползунки */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
