@@ -1,19 +1,39 @@
 <template>
-    <div class="info-user">
-
+  <div class="info-user">
+    <div class="info-user-list">
+      <p style="font-size: 2.1vw">{{ user.name }}</p>
+      <p style="font-size: 1.7vw">{{ user.birthDate }}</p>
+      <p style="font-size: 1vw">{{ user.numUser }}</p>
+      <p style="font-size: 1vw">{{ user.specialty }}</p>
     </div>
-   </template>
-   
-   <script>
-   import userData from '../userData.js'; // Импорт данных пользователя
-   
-   export default {
-    name: 'InfoUser',
+  </div>
+</template>
 
-   }
-   </script>
-   
-   <style scoped>
+<script>
+import userData from "../userData.js" // Импорт данных пользователя
 
-   </style>
-   
+export default {
+  name: "InfoUser",
+  data() {
+    return {
+      user: userData, // Использование данных пользователя
+    }
+  },
+}
+</script>
+
+<style scoped>
+.info-user {
+  color: rgba(242, 242, 242, 1);
+  font-weight: 600;
+  line-height: 3vh;
+  padding: 5%;
+}
+.info-user-list {
+  font-family: Montserrat;
+  background-color: rgba(88, 108, 146, 1);
+  padding: 5%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+</style>
