@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: "Date",
   data() {
     return {
       date: new Date().toLocaleDateString(), // Инициализация текущей даты
