@@ -5,7 +5,7 @@
         <h4>Инструктаж</h4>
       </div>
       <div class="info">
-        <img src="/assets/info-menu/document.svg" alt="" />
+        <img src="/assets/info-menu/document.svg" alt="Инструктаж" />
       </div>
     </div>
     <div class="menu-item">
@@ -13,7 +13,7 @@
         <h4>Предсменный экзаменатор</h4>
       </div>
       <div class="info">
-        <img src="/assets/info-menu/exam.svg" alt="" />
+        <img src="/assets/info-menu/exam.svg" alt="Предсменный экзаменатор" />
       </div>
     </div>
     <div class="menu-item">
@@ -74,8 +74,8 @@ export default {
 .info {
   border: 0.5vw solid rgba(178, 214, 60, 1);
   border-radius: 50%;
-  width: 40%;
-  height: 50%;
+  width: 7vw;
+  height: 12.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +83,11 @@ export default {
   font-size: 45px;
   font-weight: 600;
   line-height: 3vh;
+
+  & img {
+    width: 5vw;
+    height: 9vh;
+  }
 }
 .exam {
   display: flex;

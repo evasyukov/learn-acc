@@ -2,19 +2,19 @@
   <div class="menu" :class="{ visible: isVisible }">
     <router-link to="/start-work" class="button" @click="changeVisible()">
       <h1>Начать работу</h1>
-      <img src="/assets/start-work.svg" alt="" />
+      <img src="/assets/start-work.svg" alt="Начать работу" />
     </router-link>
     <router-link to="/notifications" class="button" @click="changeVisible()">
       <h1>Уведомления</h1>
-      <img src="/assets/messange.svg" alt="" />
+      <img src="/assets/messange.svg" alt="Уведомления" />
     </router-link>
     <router-link to="/training" class="button" @click="changeVisible()"
       ><h1>Обучение</h1>
-      <img src="/assets/training.svg" alt=""
+      <img src="/assets/training.svg" alt="Обучение"
     /></router-link>
     <router-link to="/achievements" class="button" @click="changeVisible()"
       ><h1>Достижения</h1>
-      <img src="/assets/achievements.svg" alt=""
+      <img src="/assets/achievements.svg" alt="Достижения"
     /></router-link>
   </div>
   <router-view></router-view>

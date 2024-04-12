@@ -1,7 +1,7 @@
 <template>
-    <h1>Уведомления</h1>
-  </template>
-  
-  <script>
-  export default {}
-  </script>
+  <h1>Уведомления</h1>
+</template>
+
+<script>
+export default {}
+</script>
