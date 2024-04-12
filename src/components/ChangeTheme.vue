@@ -31,20 +31,15 @@ export default {
   background: none;
   border: none;
 }
-/* Переключатель - коробка вокруг ползунка */
 .switch {
   position: relative;
   display: inline-block;
   width: 76px;
   height: 34px;
 }
-
-/* Скрыть флажок HTML по умолчанию */
 .switch input {
   opacity: 0;
 }
-
-/* Ползунок */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -58,7 +53,6 @@ export default {
   width: 76px;
   height: 20px;
 }
-
 .slider:before {
   content: url(/assets/change-btn.svg);
   position: absolute;
@@ -67,22 +61,15 @@ export default {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 input:checked + .slider {
   background: rgba(239, 127, 26, 1);
 }
-
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(90%);
 }
-
-/* Закругленные ползунки */
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }

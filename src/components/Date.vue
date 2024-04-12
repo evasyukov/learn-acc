@@ -52,10 +52,9 @@ export default {
 p {
   color: rgba(242, 242, 242, 1);
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 700;
-  line-height: 24.38px;
-  text-align: left;
+  /* text-align: left; */
 }
 .exit {
   margin-top: 3%;
@@ -65,16 +64,17 @@ p {
   background: none;
   border: none;
   cursor: pointer;
-}
-.exit img {
-  width: 40px;
-  height: 40px;
-}
-.exit p {
-  /* font-family: Montserrat; */
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29.26px;
-  text-align: left;
+
+  & img {
+    width: 2.1vw;
+    height: 3.7vh;
+  }
+
+  & p {
+    font-size: 1.3vw;
+    font-weight: 400;
+    line-height: 29.26px;
+    text-align: left;
+  }
 }
 </style>
