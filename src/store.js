@@ -1,14 +1,24 @@
-import {createApp} from 'vue';
-import Vuex from 'vuex';
-
+import { createApp } from "vue"
+import Vuex from "vuex"
 
 export default new Vuex.Store({
- state: {
+  state: {
+    theme: "dark",
     isVisible: false, // Изначальное состояние видимости
- },
- mutations: {
-    toggleVisibility(state) {
-      state.isVisible = !state.isVisible;
+  },
+  mutations: {
+    toggleTheme(state) {
+      console.log('Toggle theme called');
+      state.theme = state.theme === 'dark' ? 'light' : 'light'
+      console.log('New theme:', state.theme);
     },
- },
-});
+    changeVisibility(state) {
+      state.isVisible = !state.isVisible
+    },
+  },
+  actions: {
+   toggleTheme({commit}) {
+      commit('toggleTheme')
+   }
+  }
+})

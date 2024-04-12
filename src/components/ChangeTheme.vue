@@ -1,6 +1,6 @@
 <template>
   <div class="change-button">
-    <button @click="changeColors">
+    <button @click="toggleTheme">
       <label class="switch">
         <input type="checkbox" />
         <span class="slider round"></span>
@@ -13,9 +13,8 @@
 export default {
   name: "ChangeTheme",
   methods: {
-    changeColors() {
-      document.getElementById("app").classList.add("light-theme")
-      document.querySelector(".left-menu").classList.add("light-theme")
+    toggleTheme() {
+      this.$store.dispatch("toggleTheme")
     },
   },
 }

@@ -5,7 +5,7 @@
       <p>{{ time }}</p>
     </div>
     <button class="exit">
-      <router-link to="/exit" @click="toggleVisibility()">
+      <router-link to="/exit" @click="changeVisibility()">
         <p>Выход</p>
       </router-link>
       <img src="../../assets/exit-icon.svg" alt="Выход" />
@@ -41,7 +41,7 @@ export default {
         }) // обновление времени без секунд каждую секунду
       }, 1000)
     },
-    ...mapMutations(["toggleVisibility"]),
+    ...mapMutations(["changeVisibility"]),
   },
 }
 </script>

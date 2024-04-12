@@ -1,18 +1,18 @@
 <template>
   <div class="menu" :class="{ visible: isVisible }">
-    <router-link to="/start-work" class="button" @click="toggleVisibility()">
+    <router-link to="/start-work" class="button" @click="changeVisibility()">
       <h1>Начать работу</h1>
       <img src="/assets/start-work.svg" alt="Начать работу" />
     </router-link>
-    <router-link to="/notifications" class="button" @click="toggleVisibility()">
+    <router-link to="/notifications" class="button" @click="changeVisibility()">
       <h1>Уведомления</h1>
       <img src="/assets/messange.svg" alt="Уведомления" />
     </router-link>
-    <router-link to="/training" class="button" @click="toggleVisibility()"
+    <router-link to="/training" class="button" @click="changeVisibility()"
       ><h1>Обучение</h1>
       <img src="/assets/training.svg" alt="Обучение"
     /></router-link>
-    <router-link to="/achievements" class="button" @click="toggleVisibility()"
+    <router-link to="/achievements" class="button" @click="changeVisibility()"
       ><h1>Достижения</h1>
       <img src="/assets/achievements.svg" alt="Достижения"
     /></router-link>
@@ -29,7 +29,7 @@ export default {
     ...mapState(["isVisible"]),
   },
   methods: {
-    ...mapMutations(["toggleVisibility"]),
+    ...mapMutations(["changeVisibility"]),
   },
 }
 </script>
