@@ -5,17 +5,25 @@
       <p>{{ time }}</p>
     </div>
     <button class="exit">
-      <p>Выход</p>
-      <img src="../../assets/exit-icon.svg" alt="exit" />
+      <router-link to="/exit" @click="changeVisible()">
+        <p>Выход</p>
+      </router-link>
+      <img src="../../assets/exit-icon.svg" alt="Выход" />
     </button>
   </div>
 </template>
 
 <script>
+import MainBlock from "./MainBlock.vue"
+
 export default {
+  components: {
+    MainBlock,
+  },
   name: "Date",
   data() {
     return {
+      isVisible: false, 
       date: new Date().toLocaleDateString(), // Инициализация текущей даты
       time: new Date().toLocaleTimeString([], {
         hour: "2-digit",
@@ -35,6 +43,9 @@ export default {
           minute: "2-digit",
         }) // Обновление времени без секунд каждую секунду
       }, 1000)
+    },
+    changeVisible() {
+      this.isVisible = !this.isVisible
     },
   },
 }
@@ -64,6 +75,10 @@ p {
   background: none;
   border: none;
   cursor: pointer;
+
+  & a {
+    text-decoration: none;
+  }
 
   & img {
     width: 2.1vw;

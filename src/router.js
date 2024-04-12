@@ -3,6 +3,7 @@ import StartWork from "./components/router/StartWork.vue"
 import Notifications from "./components/router/Notifications.vue"
 import Training from "./components/router/Training.vue"
 import Achievements from "./components/router/Achievements.vue"
+import Exit from "./components/router/Exit.vue"
 
 
 export default createRouter({
@@ -12,5 +13,6 @@ export default createRouter({
     { path: "/notifications", component: Notifications },
     { path: "/training", component: Training },
     { path: "/achievements", component: Achievements },
+    { path: "/exit", component: Exit },
   ],
 })
