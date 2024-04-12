@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     appClass() {
-      return this.$store.state.theme === 'light' ? 'light-theme' : 'dark-theme'
+      return this.$store.state.theme === 'dark' ? 'dark-theme' : 'light-theme'
     }
   }
 }

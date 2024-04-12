@@ -8,9 +8,9 @@ export default new Vuex.Store({
   },
   mutations: {
     toggleTheme(state) {
-      console.log('Toggle theme called');
-      state.theme = state.theme === 'dark' ? 'light' : 'light'
-      console.log('New theme:', state.theme);
+      console.log('Функция вызвана');
+      state.theme = state.theme === 'dark' ? 'light' : 'dark'
+      console.log('Тема:', state.theme);
     },
     changeVisibility(state) {
       state.isVisible = !state.isVisible
