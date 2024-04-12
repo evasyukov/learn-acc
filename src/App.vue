@@ -31,8 +31,8 @@ export default {
 
 <style>
 .left-menu {
-  width: 34.5vw;
-  height: 100%;
+  width: 37.5vw;
+  height: 100vh;
   background-color: #353d54;
   border-radius: 0 20px 20px 0;
   box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.25);

@@ -47,7 +47,7 @@ export default {
 }
 .date-time {
   width: 45%;
-  padding: 5%;
+  padding: 4% 5% 0 5%;
 }
 p {
   color: rgba(242, 242, 242, 1);

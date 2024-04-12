@@ -21,15 +21,16 @@
         <h4>Тестов выполнено</h4>
       </div>
       <div class="info">
-        <p style="font-size: 5vh">{{ amountTests }}</p>
+        <p style="font-size: 4vh">{{ amountTests }}</p>
       </div>
     </div>
     <div class="menu-item">
       <div class="title">
         <h4>Аттестация через</h4>
       </div>
-      <div class="info">
-        <p class="daysExam" :class="chekDays">{{ daysExam }}</p>
+      <div class="info exam">
+        <p class="daysExam">{{ daysExam }} </p> 
+        <p style="font-size: 1.9vh;"> дней</p>
       </div>
     </div>
   </div>
@@ -54,11 +55,10 @@ export default {
   justify-content: center;
 }
 .menu-item {
-  width: 14vw;
-  height: 21.5vh;
+  width: 14.7vw;
+  height: 24.2vh;
   color: rgba(242, 242, 242, 1);
   font-family: Montserrat;
-  font-size: 20px;
   font-weight: 700;
   text-align: center;
   background: #5e729a;
@@ -82,15 +82,15 @@ export default {
   font-weight: 600;
   line-height: 3vh;
 }
+.exam{
+  display: flex;
+  flex-direction: column;
+}
 h4 {
-  font-size: 2.3vh;
+  font-size: 2vh;
 }
 .daysExam {
-  font-size: 4vh;
-}
-.daysExam::after {
-  content: "дней";
-  font-size: 1.2vw;
+  font-size: 3vh;
 }
 .title {
   padding: 5%;
