@@ -41,19 +41,33 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding: 5%;
-  /* display: none; */
 }
 .visible {
   display: none;
 }
 .button {
-  padding: 5%;
-  width: 10vw;
-  height: 200px;
+  padding: 3% 5% 5% 5%;
+  width: 15vw;
+  height: 18.2vh;
   background-color: rgba(239, 127, 26, 1);
   margin: 5%;
   color: #f2f2f2;
   text-decoration: none;
   font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  & h1 {
+    margin-bottom: 6%;
+    font-size: 3.4vh;
+  }
+  & img {
+    width: 7vw;
+    height: 50vh;
+  }
 }
 </style>

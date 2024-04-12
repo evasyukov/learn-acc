@@ -29,8 +29,8 @@
         <h4>Аттестация через</h4>
       </div>
       <div class="info exam">
-        <p class="daysExam">{{ daysExam }} </p> 
-        <p style="font-size: 1.9vh;"> дней</p>
+        <p class="daysExam">{{ daysExam }}</p>
+        <p style="font-size: 1.9vh">дней</p>
       </div>
     </div>
   </div>
@@ -68,6 +68,8 @@ export default {
   align-items: center;
   align-content: center;
   justify-content: center;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .info {
   border: 0.5vw solid rgba(178, 214, 60, 1);
@@ -82,7 +84,7 @@ export default {
   font-weight: 600;
   line-height: 3vh;
 }
-.exam{
+.exam {
   display: flex;
   flex-direction: column;
 }
