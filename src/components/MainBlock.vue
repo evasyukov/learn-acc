@@ -1,14 +1,27 @@
 <template>
-  <div class="menu">
-    <router-link to="/start-work" class="button">Начать работу</router-link>
-    <router-link to="/notifications" class="button">Уведомления</router-link>
-    <router-link to="/training" class="button">Обучение</router-link>
-    <router-link to="/achievements" class="button">Достижения</router-link>
+  <div class="menu" :class="{ visible: isVisible}">
+    <router-link to="/start-work" class="button" @click="changeVisible()">Начать работу</router-link>
+    <router-link to="/notifications" class="button" @click="changeVisible()">Уведомления</router-link>
+    <router-link to="/training" class="button" @click="changeVisible()">Обучение</router-link>
+    <router-link to="/achievements" class="button" @click="changeVisible()">Достижения</router-link>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
-export default {}
+export default {
+  name: "MainBlock",
+  data() {
+    return {
+      isVisible: false // флаг видимости
+    }
+  },
+  methods: {
+    changeVisible() {
+      this.isVisible = !this.isVisible
+    }
+  }
+}
 </script>
 
 <style>
@@ -16,6 +29,10 @@ export default {}
   display: flex;
   flex-wrap: wrap;
   padding: 5%;
+  /* display: none; */
+}
+.visible {
+  display: none;
 }
 .button {
   padding: 5%;

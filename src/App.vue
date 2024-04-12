@@ -7,7 +7,6 @@
   </div>
   <div class="main-block">
     <MainBlock />
-    <router-view></router-view>
   </div>
 </template>
 
@@ -39,4 +38,5 @@ export default {
   gap: 0px;
   opacity: 0px;
 }
+
 </style>
