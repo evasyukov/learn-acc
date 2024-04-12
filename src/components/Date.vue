@@ -5,7 +5,7 @@
       <p>{{ time }}</p>
     </div>
     <button class="exit">
-      <router-link to="/exit" @click="changeVisible()">
+      <router-link to="/exit" @click="toggleVisibility()">
         <p>Выход</p>
       </router-link>
       <img src="../../assets/exit-icon.svg" alt="Выход" />
@@ -14,39 +14,34 @@
 </template>
 
 <script>
-import MainBlock from "./MainBlock.vue"
+import { mapMutations } from "vuex"
 
 export default {
-  components: {
-    MainBlock,
-  },
   name: "Date",
   data() {
     return {
-      isVisible: false, 
-      date: new Date().toLocaleDateString(), // Инициализация текущей даты
+      date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString([], {
+        // инициализация текущих даты и времени
         hour: "2-digit",
         minute: "2-digit",
-      }), // Инициализация текущего времени
+      }),
     }
   },
   mounted() {
-    this.updateDateTime() // Вызов функции обновления даты и времени при монтировании компонента
+    this.updateDateTime() // вызов функции обновления даты и времени при монтировании компонента
   },
   methods: {
     updateDateTime() {
       setInterval(() => {
-        this.date = new Date().toLocaleDateString() // Обновление даты каждую секунду
+        this.date = new Date().toLocaleDateString() // обновление даты каждую секунду
         this.time = new Date().toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
-        }) // Обновление времени без секунд каждую секунду
+        }) // обновление времени без секунд каждую секунду
       }, 1000)
     },
-    changeVisible() {
-      this.isVisible = !this.isVisible
-    },
+    ...mapMutations(["toggleVisibility"]),
   },
 }
 </script>

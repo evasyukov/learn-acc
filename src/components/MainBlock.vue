@@ -1,18 +1,18 @@
 <template>
   <div class="menu" :class="{ visible: isVisible }">
-    <router-link to="/start-work" class="button" @click="changeVisible()">
+    <router-link to="/start-work" class="button" @click="toggleVisibility()">
       <h1>Начать работу</h1>
       <img src="/assets/start-work.svg" alt="Начать работу" />
     </router-link>
-    <router-link to="/notifications" class="button" @click="changeVisible()">
+    <router-link to="/notifications" class="button" @click="toggleVisibility()">
       <h1>Уведомления</h1>
       <img src="/assets/messange.svg" alt="Уведомления" />
     </router-link>
-    <router-link to="/training" class="button" @click="changeVisible()"
+    <router-link to="/training" class="button" @click="toggleVisibility()"
       ><h1>Обучение</h1>
       <img src="/assets/training.svg" alt="Обучение"
     /></router-link>
-    <router-link to="/achievements" class="button" @click="changeVisible()"
+    <router-link to="/achievements" class="button" @click="toggleVisibility()"
       ><h1>Достижения</h1>
       <img src="/assets/achievements.svg" alt="Достижения"
     /></router-link>
@@ -21,17 +21,15 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex"
+
 export default {
   name: "MainBlock",
-  data() {
-    return {
-      isVisible: false, // флаг видимости
-    }
+  computed: {
+    ...mapState(["isVisible"]),
   },
   methods: {
-    changeVisible() {
-      this.isVisible = !this.isVisible
-    },
+    ...mapMutations(["toggleVisibility"]),
   },
 }
 </script>
