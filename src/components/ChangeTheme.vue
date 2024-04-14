@@ -1,8 +1,8 @@
 <template>
   <div class="change-button">
-    <button @click="toggleTheme">
+    <button>
       <label class="switch">
-        <input type="checkbox" />
+        <input type="checkbox" @click="changeColors($event)" />
         <span class="slider round"></span>
       </label>
     </button>
@@ -10,11 +10,12 @@
 </template>
 
 <script>
-
 export default {
   name: "ChangeTheme",
   methods: {
-    toggleTheme() {
+    changeColors(event) {
+      // event.preventDefault()
+      event.stopPropagation()
       this.$store.dispatch("toggleTheme")
     },
   },
