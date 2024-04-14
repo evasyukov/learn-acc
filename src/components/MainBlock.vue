@@ -44,7 +44,7 @@ export default {
   display: none;
 }
 .button {
-  padding: 3% 5% 5% 5%;
+  padding: 3% 7% 5% 5%;
   width: 15vw;
   height: 18.2vh;
   background-color: rgba(239, 127, 26, 1);
@@ -61,11 +61,18 @@ export default {
 
   & h1 {
     margin-bottom: 6%;
-    font-size: 3.4vh;
+    font-size: 1.8vw;
   }
   & img {
     width: 7vw;
     height: 50vh;
   }
 }
+
+
+/* @media (max-width: 1400px) {
+  .button h1 {
+    font-size: 2;
+  }
+} */
 </style>
