@@ -60,7 +60,6 @@ p {
   font-family: Montserrat;
   font-size: 1vw;
   font-weight: 700;
-  /* text-align: left; */
 }
 .exit {
   margin-top: 3%;

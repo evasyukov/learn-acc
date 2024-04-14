@@ -47,7 +47,7 @@ export default {
   padding: 3% 7% 5% 5%;
   width: 15vw;
   height: 18.2vh;
-  background-color: rgba(239, 127, 26, 1);
+  background-color: #EF7F1A;
   margin: 5%;
   color: #f2f2f2;
   text-decoration: none;
