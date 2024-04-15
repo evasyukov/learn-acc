@@ -1,5 +1,6 @@
 <template>
-  <div class="menu" :class="{ visible: isVisible }">
+  <!-- в зависимости от состояния isVisible накидывает или снимает класс visible -->
+  <div class="menu" :class="{ visible: isVisible }"> 
     <router-link to="/start-work" class="button" @click="changeVisibility()">
       <h1>Начать работу</h1>
       <img src="/assets/start-work.svg" alt="Начать работу" />
@@ -26,10 +27,10 @@ import { mapState, mapMutations } from "vuex"
 export default {
   name: "MainBlock",
   computed: {
-    ...mapState(["isVisible"]),
+    ...mapState(["isVisible"]), // получение состояния isVisible из store.js
   },
   methods: {
-    ...mapMutations(["changeVisibility"]),
+    ...mapMutations(["changeVisibility"]), // вызов мутации из store.js для изменения видимости меню
   },
 }
 </script>

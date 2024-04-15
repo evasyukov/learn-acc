@@ -29,10 +29,10 @@ export default {
   },
   computed: {
     appClass() {
-      return this.$store.state.theme === "dark" ? "light-theme" : "dark-theme"
+      return this.$store.state.theme === "dark" ? "light-theme" : "dark-theme" // проверка текущей темы для фона 
     },
     appClassMenu() {
-      return this.$store.state.themeMenu === "darkMenu"
+      return this.$store.state.themeMenu === "darkMenu" // проверка текущей темы для меню слева
         ? "light-menu"
         : "dark-menu"
     },

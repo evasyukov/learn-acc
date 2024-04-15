@@ -14,8 +14,7 @@ export default {
   name: "ChangeTheme",
   methods: {
     changeColors(event) {
-      // event.preventDefault()
-      event.stopPropagation()
+      event.stopPropagation() // Прерываем 
       this.$store.dispatch("toggleTheme")
     },
   },

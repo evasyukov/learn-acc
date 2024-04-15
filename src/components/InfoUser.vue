@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import userData from "../userData.js" // Импорт данных пользователя
+import userData from "../userData.js" 
 
 export default {
   name: "InfoUser",
   data() {
     return {
-      user: userData, // Использование данных пользователя
+      user: userData, // использование данных пользователя
     }
   },
 }
